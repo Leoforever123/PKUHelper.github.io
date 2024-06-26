@@ -5,9 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>My class pool</title>
         <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/mhDoLbDldZc3qpsJHpLogda//BVZbgYuw6kof4u2FrCedxOtgRZDTHgHUhOCVim" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
         <link rel="stylesheet" href="../CSS/main.css">
+        <link rel="stylesheet" href="../CSS/pool.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
         <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="https://unpkg.com/sober/dist/sober.min.js"></script>
     </head>
@@ -27,10 +29,10 @@
                     <a class="nav-link active" aria-current="page" href="../index.html"><s-ripple class="mainNavbar">选课助手</s-ripple></a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="map.html"><s-ripple class="mainNavbar">北大地图</s-ripple></a>
+                    <a class="nav-link" href="#"><s-ripple class="mainNavbar">我的课塘</s-ripple></a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="#"><s-ripple class="mainNavbar">我的鱼塘</s-ripple></a>
+                    <a class="nav-link" href="map.html"><s-ripple class="mainNavbar">课程测评</s-ripple></a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="#"><s-ripple class="mainNavbar">敬请期待</s-ripple></a>
@@ -38,10 +40,29 @@
                 </ul>
                 </div>
             </div>
-            </nav>
+        </nav>
 
-        <h1>我的鱼塘</h1>
-        <canvas id="pool"></canvas>        
-        <script src = "../js/pool.js" defer ></script>
+        <div class="row">
+            <div class="col-2">
+                <div class="card">
+                    <div class="card-body" align="center">
+                        <h5 class="card-title">我的课塘</h5>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div class="row">
+            <div class="col-9" id="canvasDiv">
+                <canvas id="pool"></canvas>
+            </div>
+            <div class="col-3">
+                <div class="custom-container">
+                    <h4 style="color:#ffffff; display: inline;">我的课程</h4>
+                    <s-button id="check" style="float: right; margin-bottom: 10px;"> 计算投点 </s-button>
+                <div id="myCourses"></div>
+            </div>
+            </div>
+        </div>        
+        <script type="module" src = "../js/pool.js" defer ></script>
     </body>
 </html>

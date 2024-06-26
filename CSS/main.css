@@ -18,3 +18,38 @@
 #pool {
     width: 80%;
 }
+
+.custom-container {
+    background-color: #497e4e; /* 淡绿色背景 */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.custom-container .input-group {
+    margin-bottom: 20px;
+}
+.input-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.card-header {
+    background-color: #ffffff;
+    transition: background-color 0.3s;
+}
+.card-header a {
+    text-decoration: none;
+    color: inherit; /* 保持原始颜色 */
+}
+.card-header:hover {
+    background-color: #e2e6ea; /* 鼠标悬浮时背景颜色加深 */
+}
+.conflict {
+    background-color: #ffcccc; /* 冲突课程背景颜色 */
+}
+.seperate {
+    list-style-type: none;
+}
+
+

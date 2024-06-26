@@ -1,0 +1,54 @@
+s-card {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+s-text-field {
+    display: inline;
+    max-height: 20px;
+    max-width: 50px;
+}
+
+.row #classs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+}
+
+s-rate {
+    display: inline;
+    float: right;
+}
+
+#heart {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+#hearth {
+    font-size: 16px;
+}
+
+.courses {
+    margin-top:10px;
+    font-size: 18px;
+}
+
+s-dialog {
+    white-space: pre;
+    font-size : 18px;
+}
+
+#canvasDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pool {
+    width: 100%;
+}

@@ -1,0 +1,64 @@
+{
+    "name": "class database",
+    "version": "1.0.0",
+    "formed": "2024-06-25",
+    "description": "this is a class database for all the classes showing on PKUHelper web",
+    "main": "index.js",
+    "classes": [
+        {
+            "name": "计算机网络",
+            "credit": "3",
+            "teacher": "李建",
+            "day": ["MON", "FRI"],
+            "time": ["1", "2"],
+            "duration": ["2", "2"],
+            "classroom": "教一 101",
+            "description": "计算机网络课程，主要讲解计算机网络的基本概念和原理，以及网络协议的设计与实现。",
+            "recommand": "true"
+        },
+        {
+            "name": "计算机组成原理",
+            "credit": "3",
+            "teacher": "李建",
+            "day": ["MON"],
+            "time": ["2"],
+            "duration": ["2"],
+            "classroom": "教一 101",
+            "description": "计算机组成原理课程，主要讲解计算机的基本组成原理，以及计算机的工作原理。",
+            "recommand": "false"
+        },
+        {
+            "name": "操作系统",
+            "credit": "3",
+            "teacher": "李建",
+            "day": ["MON"],
+            "time": ["1"],
+            "duration": ["2"],
+            "classroom": "教一 101",
+            "description": "操作系统课程，主要讲解操作系统的基本概念和原理，以及操作系统的设计与实现。",
+            "recommand": "false"
+        },
+        {
+            "name": "数据库系统",
+            "credit": "3",
+            "teacher": "李建",
+            "day": ["THU"],
+            "time": ["1"],
+            "duration": ["2"],
+            "classroom": "教一 101",
+            "description": "数据库系统课程，主要讲解数据库系统的基本概念和原理，以及数据库系统的设计与实现。",
+            "recommand": "false"
+        },
+        {
+            "name": "编译原理",
+            "credit": "3",
+            "teacher": "李建",
+            "day": ["FRI"],
+            "time": ["1"],
+            "duration": ["2"],
+            "classroom": "教一 101",
+            "description": "编译原理课程，主要讲解编译原理的基本概念和原理，以及编译原理的设计与实现。",
+            "recommand": "false"
+        }
+    ]
+}

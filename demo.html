@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>practice9-DrawImage</title>
+		<style type="text/css">
+			*{
+				padding:0;
+				margin: 0;
+			}
+			body{
+				text-align: center;
+				padding-top: 20px;
+			}
+			canvas{
+				box-shadow: 0 0 10px #333333;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body onload="draw()">
+		<canvas id="canvas" width="800" height="600"></canvas>
+		
+		<script>
+			function draw(){
+				var ctx = document.getElementById('canvas');
+				
+				if (canvas.getContext) {
+					var ctx = canvas.getContext('2d');
+					
+					//定义图片
+					let img = new Image();
+					img.src = "./images/logo.png";
+					img.onload = function () {
+						ctx.drawImage(this, this.x - this.size, this.y - this.size, this.size * 2, this.size * 2);
+					}
+				}else{
+					alert('请更新浏览器！！！');
+				}
+			}
+		</script>
+	</body>
+</html>
+

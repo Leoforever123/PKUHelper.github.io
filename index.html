@@ -4,14 +4,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>PKU Helper</title>
+        
         <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/mhDoLbDldZc3qpsJHpLogda//BVZbgYuw6kof4u2FrCedxOtgRZDTHgHUhOCVim" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
         <link rel="stylesheet" href="CSS/main.css">
-        <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script src="https://unpkg.com/sober/dist/sober.min.js"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
+        <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" defer></script>
+        <script type="module" src="https://unpkg.com/sober/dist/sober.min.js" defer></script>
+        
     </head>
     <body>
+        <!-- Navigation bar -->
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <a id="PKUweb" href="https://www.pku.edu.cn">            
             <img href="https://www.pku.edu.cn" src="images/logo.png" alt="PKU logo" class="img-fluid" id="logo">
@@ -27,11 +32,12 @@
                 <a class="nav-link active" aria-current="page" href="#"><s-ripple class="mainNavbar">选课助手</s-ripple></a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="html/map.html"><s-ripple class="mainNavbar">北大地图</s-ripple></a>
+                <a class="nav-link" href="html/pool.html"><s-ripple class="mainNavbar">我的课塘</s-ripple></a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="html/pool.html"><s-ripple class="mainNavbar">我的鱼塘</s-ripple></a>
+                <a class="nav-link" href="html/map.html"><s-ripple class="mainNavbar">课程测评</s-ripple></a>
                 </li>
+                
                 <li class="nav-item">
                 <a class="nav-link" href="#"><s-ripple class="mainNavbar">敬请期待</s-ripple></a>
                 </li>
@@ -39,5 +45,185 @@
             </div>
         </div>
         </nav>
+
+        
+        <!-- Main content -->
+        <div class="container-fluid">
+            <div class="row" align="center">
+                <div class="card">
+                    <div class="card-body" align="center">
+                        <h5 class="card-title">使用说明：TODO</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <!-- 搜索栏 -->
+                    <div id="courseContainer" class="custom-container">
+                        <!-- 搜索栏 -->
+                        <div class="input-group">
+                            <s-search>
+                                <s-icon-button slot="start" id="search">
+                                  <s-icon type="search"></s-icon>
+                                </s-icon-button>
+                                <input type="text" placeholder="搜索关键字" id="searchInput">
+                                <s-icon-button slot="end" id="deleteInput">
+                                  <s-icon type="close"></s-icon>
+                                </s-icon-button>
+                              </s-search>
+                        </div>
+                        <div id="accordion"></div>
+                    </div>
+                </div>
+
+                <div class="col-8">
+                    <table class="table table-bordered table-hover table-responsive">
+                        <thead class="table-light">
+                            <tr>
+                                <th>时间</th>
+                                <th>星期一</th>
+                                <th>星期二</th>
+                                <th>星期三</th>
+                                <th>星期四</th>
+                                <th>星期五</th>
+                                <th>星期六</th>
+                                <th>星期日</th>
+                            </tr>
+                        </thead>
+                        <tbody id="timetable">
+                            <!-- 时间和日期的表格 -->
+                            <tr>
+                                <td>8:00 - 8:50</td>
+                                <td id="mon-0"></td>
+                                <td id="tue-0"></td>
+                                <td id="wed-0"></td>
+                                <td id="thu-0"></td>
+                                <td id="fri-0"></td>
+                                <td id="sat-0"></td>
+                                <td id="sun-0"></td>
+                            </tr>
+                            <tr>
+                                <td>9:00 - 9:50</td>
+                                <td id="mon-1"></td>
+                                <td id="tue-1"></td>
+                                <td id="wed-1"></td>
+                                <td id="thu-1"></td>
+                                <td id="fri-1"></td>
+                                <td id="sat-1"></td>
+                                <td id="sun-1"></td>
+                            </tr>
+                            <tr>
+                                <td>10:10 - 11:00</td>
+                                <td id="mon-2"></td>
+                                <td id="tue-2"></td>
+                                <td id="wed-2"></td>
+                                <td id="thu-2"></td>
+                                <td id="fri-2"></td>
+                                <td id="sat-2"></td>
+                                <td id="sun-2"></td>
+                            </tr>
+                            <tr>
+                                <td>11:10 - 12:00</td>
+                                <td id="mon-3"></td>
+                                <td id="tue-3"></td>
+                                <td id="wed-3"></td>
+                                <td id="thu-3"></td>
+                                <td id="fri-3"></td>
+                                <td id="sat-3"></td>
+                                <td id="sun-3"></td>
+                            </tr>
+                            <tr>
+                                <td>13:00 - 13:50</td>
+                                <td id="mon-4"></td>
+                                <td id="tue-4"></td>
+                                <td id="wed-4"></td>
+                                <td id="thu-4"></td>
+                                <td id="fri-4"></td>
+                                <td id="sat-4"></td>
+                                <td id="sun-4"></td>
+                            </tr>
+                            <tr>
+                                <td>14:00 - 14:50</td>
+                                <td id="mon-5"></td>
+                                <td id="tue-5"></td>
+                                <td id="wed-5"></td>
+                                <td id="thu-5"></td>
+                                <td id="fri-5"></td>
+                                <td id="sat-5"></td>
+                                <td id="sun-5"></td>
+                            </tr>
+                            <tr>
+                                <td>15:10 - 16:00</td>
+                                <td id="mon-6"></td>
+                                <td id="tue-6"></td>
+                                <td id="wed-6"></td>
+                                <td id="thu-6"></td>
+                                <td id="fri-6"></td>
+                                <td id="sat-6"></td>
+                                <td id="sun-6"></td>
+                            </tr>
+                            <tr>
+                                <td>16:10 - 17:00</td>
+                                <td id="mon-7"></td>
+                                <td id="tue-7"></td>
+                                <td id="wed-7"></td>
+                                <td id="thu-7"></td>
+                                <td id="fri-7"></td>
+                                <td id="sat-7"></td>
+                                <td id="sun-7"></td>
+                            </tr>
+                            <tr>
+                                <td>17:10 - 18:00</td>
+                                <td id="mon-8"></td>
+                                <td id="tue-8"></td>
+                                <td id="wed-8"></td>
+                                <td id="thu-8"></td>
+                                <td id="fri-8"></td>
+                                <td id="sat-8"></td>
+                                <td id="sun-8"></td>
+                            </tr>
+                            <tr>
+                                <td>18:40 - 19:30</td>
+                                <td id="mon-9"></td>
+                                <td id="tue-9"></td>
+                                <td id="wed-9"></td>
+                                <td id="thu-9"></td>
+                                <td id="fri-9"></td>
+                                <td id="sat-9"></td>
+                                <td id="sun-9"></td>
+                            </tr>
+                            <tr>
+                                <td>19:40 - 20:30</td>
+                                <td id="mon-10"></td>
+                                <td id="tue-10"></td>
+                                <td id="wed-10"></td>
+                                <td id="thu-10"></td>
+                                <td id="fri-10"></td>
+                                <td id="sat-10"></td>
+                                <td id="sun-10"></td>
+                            </tr>
+                            <tr>
+                                <td>20:40 - 21:30</td>
+                                <td id="mon-11"></td>
+                                <td id="tue-11"></td>
+                                <td id="wed-11"></td>
+                                <td id="thu-11"></td>
+                                <td id="fri-11"></td>
+                                <td id="sat-11"></td>
+                                <td id="sun-11"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col">
+                    <div class="custom-container">
+                            <h4 style="color:#ffffff;">我的课程</h4>
+                        <div id="myCourses"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="js/main.js" async></script>
     </body>
 </html>
