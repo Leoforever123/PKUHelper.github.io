@@ -1,44 +1,53 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>practice9-DrawImage</title>
-		<style type="text/css">
-			*{
-				padding:0;
-				margin: 0;
-			}
-			body{
-				text-align: center;
-				padding-top: 20px;
-			}
-			canvas{
-				box-shadow: 0 0 10px #333333;
-				margin: 0 auto;
-			}
-		</style>
-	</head>
-	<body onload="draw()">
-		<canvas id="canvas" width="800" height="600"></canvas>
-		
-		<script>
-			function draw(){
-				var ctx = document.getElementById('canvas');
-				
-				if (canvas.getContext) {
-					var ctx = canvas.getContext('2d');
-					
-					//定义图片
-					let img = new Image();
-					img.src = "./images/logo.png";
-					img.onload = function () {
-						ctx.drawImage(this, this.x - this.size, this.y - this.size, this.size * 2, this.size * 2);
-					}
-				}else{
-					alert('请更新浏览器！！！');
-				}
-			}
-		</script>
-	</body>
-</html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上传图片并设置为背景</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+        }
+        #upload-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="upload-button">选择图片</button>
 
+    <script>
+        document.getElementById('upload-button').addEventListener('click', function() {
+            // 创建一个隐藏的文件输入元素
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file';
+            fileInput.accept = 'image/*';
+            fileInput.style.display = 'none';
+
+            // 监听文件输入元素的变化事件
+            fileInput.addEventListener('change', function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.body.style.backgroundImage = `url(${e.target.result})`;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // 触发文件输入元素的点击事件
+            fileInput.click();
+        });
+    </script>
+</body>
+</html>

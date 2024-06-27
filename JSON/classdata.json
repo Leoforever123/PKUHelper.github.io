@@ -58,7 +58,7 @@
             "duration": ["2"],
             "classroom": "教一 101",
             "description": "编译原理课程，主要讲解编译原理的基本概念和原理，以及编译原理的设计与实现。",
-            "recommand": "false"
+            "recommand": "true"
         }
     ]
 }

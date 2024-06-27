@@ -32,10 +32,35 @@
                     <a class="nav-link" href="#"><s-ripple class="mainNavbar">我的课塘</s-ripple></a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="map.html"><s-ripple class="mainNavbar">课程测评</s-ripple></a>
-                    </li>
-                    <li class="nav-item">
                     <a class="nav-link" href="#"><s-ripple class="mainNavbar">敬请期待</s-ripple></a>
+                    </li>
+                    <li class="nav-item" style="display: flex; align-items: center;">
+                        <s-menu>
+                            <s-icon-button type="filled" slot="trigger">
+                                <s-icon type="menu"></s-icon>
+                            </s-icon-button>
+                            <s-menu-item id="instruction">使用说明</s-menu-item>
+                            <s-menu>
+                            <s-menu-item slot="trigger">
+                                池塘透明度
+                                <s-icon slot="end" type="arrow_drop_right"></s-icon>
+                            </s-menu-item>
+                            <s-menu-item>
+                                <s-slider id="opacity"  style="color: #009688" min="0", max="100", step="1" value="20"></s-slider>    
+                            </s-menu-item>
+                            </s-menu>
+                            <s-menu>
+                              <s-menu-item slot="trigger">
+                                更换背景
+                                <s-icon slot="end" type="arrow_drop_right"></s-icon>
+                              </s-menu-item>
+                              <s-menu-item id="Zelda">Zelda</s-menu-item>
+                              <s-menu-item id="paper">纸质背景</s-menu-item>
+                              <s-menu-item id="red">红色血脉</s-menu-item>
+                              <s-menu-item id="DIY">自定义</s-menu-item>
+                            </s-menu>
+                              
+                        </s-menu>
                     </li>
                 </ul>
                 </div>

@@ -1,5 +1,6 @@
 .navbar {
     height: 60px;
+    width:  100%;
 }
 .mainNavbar {
     justify-content: flex-start;
@@ -52,4 +53,18 @@
     list-style-type: none;
 }
 
+body
+{
+    background-image:url('../images/background1.jpg');
+    background-size:cover;
+}
 
+#classsheet {
+    background-color: #ffffff;
+    opacity: 0.8;
+}
+
+s-dialog {
+    white-space: pre;
+    font-size : 18px;
+}

@@ -27,21 +27,46 @@
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"><s-ripple class="mainNavbar">选课助手</s-ripple></a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="html/pool.html"><s-ripple class="mainNavbar">我的课塘</s-ripple></a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="html/map.html"><s-ripple class="mainNavbar">课程测评</s-ripple></a>
-                </li>
-                
-                <li class="nav-item">
-                <a class="nav-link" href="#"><s-ripple class="mainNavbar">敬请期待</s-ripple></a>
-                </li>
-            </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"><s-ripple class="mainNavbar">选课助手</s-ripple></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="html/pool.html"><s-ripple class="mainNavbar">我的课塘</s-ripple></a>
+                    </li>                    
+                    <li class="nav-item">
+                    <a class="nav-link" href="#"><s-ripple class="mainNavbar">敬请期待</s-ripple></a>
+                    </li>
+
+                    <li class="nav-item" style="display: flex; align-items: center;">
+                        <s-menu>
+                            <s-icon-button type="filled" slot="trigger">
+                                <s-icon type="menu"></s-icon>
+                            </s-icon-button>
+                            <s-menu-item id="instruction">使用说明</s-menu-item>
+                            <s-menu>
+                            <s-menu-item slot="trigger">
+                                课表透明度
+                                <s-icon slot="end" type="arrow_drop_right"></s-icon>
+                            </s-menu-item>
+                            <s-menu-item>
+                                <s-slider id="opacity"  style="color: #009688" min="0", max="100", step="1" value="80"></s-slider>    
+                            </s-menu-item>
+                            </s-menu>
+                            <s-menu>
+                              <s-menu-item slot="trigger">
+                                更换背景
+                                <s-icon slot="end" type="arrow_drop_right"></s-icon>
+                              </s-menu-item>
+                              <s-menu-item id="Zelda">Zelda</s-menu-item>
+                              <s-menu-item id="paper">纸质背景</s-menu-item>
+                              <s-menu-item id="red">红色血脉</s-menu-item>
+                              <s-menu-item id="DIY">自定义</s-menu-item>
+                            </s-menu>
+                              
+                        </s-menu>
+                    </li>
+                </ul>
             </div>
         </div>
         </nav>
@@ -49,13 +74,7 @@
         
         <!-- Main content -->
         <div class="container-fluid">
-            <div class="row" align="center">
-                <div class="card">
-                    <div class="card-body" align="center">
-                        <h5 class="card-title">使用说明：TODO</h5>
-                    </div>
-                </div>
-            </div>
+            
             <div class="row">
                 <div class="col-2">
                     <!-- 搜索栏 -->
@@ -77,7 +96,7 @@
                 </div>
 
                 <div class="col-8">
-                    <table class="table table-bordered table-hover table-responsive">
+                    <table class="table table-bordered table-hover table-responsive" id="classsheet">
                         <thead class="table-light">
                             <tr>
                                 <th>时间</th>

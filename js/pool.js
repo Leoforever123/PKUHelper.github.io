@@ -1,8 +1,77 @@
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('Zelda').addEventListener('click', () => {
+        document.querySelector('body').style.backgroundImage = "url('../images/background1.jpg')";
+    });
+    document.getElementById('paper').addEventListener('click', () => {
+        document.querySelector('body').style.backgroundImage = "url('../images/background2.png')";
+    });
+    document.getElementById('red').addEventListener('click', () => {
+        document.querySelector('body').style.backgroundImage = "url('../images/background3.jpg')";
+    });
+    document.getElementById('DIY').addEventListener('click', () => {
+      // 创建一个隐藏的文件输入元素
+      const fileInput = document.createElement('input');
+      fileInput.type = 'file';
+      fileInput.accept = 'image/*';
+      fileInput.style.display = 'none';
+  
+      // 监听文件输入元素的变化事件
+      fileInput.addEventListener('change', function(event) {
+          const file = event.target.files[0];
+          if (file) {
+              const reader = new FileReader();
+              reader.onload = function(e) {
+                  document.body.style.backgroundImage = `url(${e.target.result})`;
+              };
+              reader.readAsDataURL(file);
+          }
+      });
+  
+      // 触发文件输入元素的点击事件
+      fileInput.click();
+    });
+  });
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('instruction').addEventListener('click', () => {
+      let result = `
+            在你的课塘中，你可以看到所有你选择的课程，
+        同时提供投点推荐功能，帮助你更好地选择投点。你
+        需要填写所有非推荐课程的已选人数和限选人数以及
+        心动值，并且确保你的选课表中没有冲突选课，然后
+        点击推荐投点按钮，即可得到推荐的投点方案。
+
+            同时，设置心动值可以调整课程球的大小，一起
+        来养课程球吧！
+
+        本项目由王骏达完成，如有问题请联系邮箱：
+        2200013111@stu.pku.edu.cn
+      `;
+      customElements.get('s-dialog').show({
+        headline: '使用说明',
+        text: result,
+        actions: [{
+            text: '关闭',
+        }]
+      });
+    });
+  });
+
 let allCourses = [];
+let chosenNum = localStorage.getItem("chosenNum");
+let courses = [];
+let chosenCourses = [];
+let nonrecommend = [];
+let totalsum;
+for (let i = 0; i < chosenNum; i++) {
+    let course = localStorage.getItem("chosenCourse" + i);
+    courses.push(course);
+}
+
 async function getAllCourses() {
     try {
         // 使用 fetch API 加载本地 JSON 文件
-        const response = await fetch('JSON/classdata.json');
+        const response = await fetch('../JSON/classdata.json');
         // 确保响应成功
         if (!response.ok) {
             throw new Error('网络响应失败');
@@ -12,27 +81,29 @@ async function getAllCourses() {
         
         // 遍历 classes 数组中的所有课程
         allCourses = data.classes;
+        for (let i = 0; i < chosenNum; i++) {
+            for (let j = 0; j < allCourses.length; j++) {
+                if (courses[i] === allCourses[j].name) {
+                    chosenCourses.push(allCourses[j]);
+                    if (allCourses[j].recommand === "false") {
+                        nonrecommend.push([allCourses[j], i]);
+                    }
+                    break;
+                }
+            }
+        } 
+        totalsum = nonrecommend.length;
+        addClasses();
+        addEvent();
     } catch (error) {
         // 处理错误
         console.error('获取课程信息时出错:', error);
     }
 }
 
-let chosenNum = localStorage.getItem("chosenNum");
-let courses = [];
-let chosenCourses = [];
-for (let i = 0; i < chosenNum; i++) {
-    let course = localStorage.getItem("chosenCourse" + i);
-    courses.push(course);
-}
-for (let i = 0; i < chosenNum; i++) {
-    for (let j = 0; j < allCourses.length; j++) {
-        if (courses[i] === allCourses[j].name) {
-            chosenCourses.push(allCourses[j]);
-            break;
-        }
-    }
-}
+getAllCourses();
+
+
 
 function P(e, num0, num1, x) {
     return e * Math.pow((1 - num0 / (num1 + x)), 0.55 * x + 0.5) 
@@ -56,10 +127,16 @@ document.addEventListener("DOMContentLoaded", function () {
         let p1 = 392.6;
         let p2 = -101;
         let reg1 = /^\d+$/     //自然数
-        for (let i = 0; i < chosenNum; i++) {
-            let p = document.getElementById("pending" + i).value;
-            let m = document.getElementById("max" + i).value;
-            let h = document.getElementById("slider" + i).value + 1;
+        const has_conflict = localStorage.getItem("conflict");
+        if (has_conflict === "true") {
+            customElements.get('s-snackbar').show({text: '选课表中有冲突选课！',
+                                                    action: '关闭'});
+            return;
+        }
+        for (let i = 0; i < totalsum; i++) {
+            let p = document.getElementById("pending" + nonrecommend[i][1]).value;
+            let m = document.getElementById("max" + nonrecommend[i][1]).value;
+            let h = document.getElementById("slider" + nonrecommend[i][1]).value + 1;
             // 检查p, m是否为正整数
             if (p === "" || m === "" || h === "") {
                 customElements.get('s-snackbar').show({text: '没有填写完整信息！',
@@ -82,11 +159,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 need.push(i);
             }
         }
+        console.log(need);
+        console.log(pending);
+
         if (need.length == 0){
             let result = '';
-            for (let i = 0; i < chosenNum; i++) {
-                result += courses[i] + '：'
-                let temp = length - courses[i].length;
+            for (let i = 0; i < totalsum; i++) {
+                result += courses[nonrecommend[i][1]] + '：'
+                let temp = length - courses[nonrecommend[i][1]].length;
                 while (temp--) {
                     result += '\u3000';
                 }
@@ -131,9 +211,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
         let result = '';
-        for (let i = 0; i < chosenNum; i++) {
-            result += courses[i] + '：'
-            let temp = length - courses[i].length;
+        for (let i = 0; i < totalsum; i++) {
+            result += courses[nonrecommend[i][1]] + '：'
+            let temp = length - courses[nonrecommend[i][1]].length;
             while (temp--) {
                 result += '\u3000';
             }
@@ -158,9 +238,10 @@ const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 const colors = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#FF00FF", "#00FFFF"];
 const ballImages = ["../images/blue.png", "../images/red.png", "../images/green.png"]
+let opacity = 0.2;
 function initCanvas() {
     ctx.clearRect(0, 0, window.innerWidth,window.innerHeight);
-    ctx.fillStyle = 'rgba(6,89,200,0.77)';
+    ctx.fillStyle = 'rgba(60,140,232,' + opacity + ')'; // 设置填充颜色
     ctx.fillRect(0,0,window.innerWidth,window.innerHeight);
   }
 
@@ -201,18 +282,22 @@ Ball.prototype.draw = function (classnum) {
 Ball.prototype.update = function () {
     if (this.x + this.size >= width) {
         this.velX = -this.velX;
+        this.x = width - this.size;
     }
 
     if (this.x - this.size <= 0) {
         this.velX = -this.velX;
+        this.x = this.size;
     }
 
     if (this.y + this.size >= height) {
         this.velY = -this.velY;
+        this.y = height - this.size;
     }
 
     if (this.y - this.size <= 0) {
         this.velY = -this.velY;
+        this.y = this.size;
     }
 
     this.x += this.velX;
@@ -287,8 +372,6 @@ while (balls.length < maxnum) {
 
 function loop() {
     initCanvas();
-    ctx.fillStyle = "rgba(0,0,0,0.25)";
-    ctx.fillRect(0, 0, width, height);
 
     for (let i = 0; i < balls.length; i++) {
         balls[i].draw(i);
@@ -299,41 +382,60 @@ function loop() {
     requestAnimationFrame(loop);
 }
 loop();
-
-const myCourses = document.querySelector("#myCourses");
-for (let i = 0; i < chosenNum; i++) {
-    myCourses.innerHTML += `
-    <s-card clickable="true">
-    <div slot="subhead" class="courses">${courses[i]}</div>
-        <div slot="text">
-            <div class="row" id="classs">
-                <div class="col">
-                    <s-text-field label="已选人数">
-                        <textarea rows="1" cols="5" id="pending${i}"></textarea>
-                    </s-text-field>
+function addClasses() {
+    const myCourses = document.querySelector("#myCourses");
+    for (let i = 0; i < chosenNum; i++) {
+        if (chosenCourses[i].recommand === "false") {
+            myCourses.innerHTML += `
+            <s-card clickable="true">
+            <div slot="subhead" class="courses">${courses[i]}</div>
+                <div slot="text">
+                    <div class="row" id="classs">
+                        <div class="col">
+                            <s-text-field label="已选人数">
+                                <textarea rows="1" cols="5" id="pending${i}"></textarea>
+                            </s-text-field>
+                        </div>
+                        <div class="col">
+                            <s-text-field label="限选人数">
+                                <textarea rows="1" cols="5" id="max${i}"></textarea>
+                            </s-text-field>
+                        </div>
+                    </div>
                 </div>
-                <div class="col">
-                    <s-text-field label="限选人数">
-                        <textarea rows="1" cols="5" id="max${i}"></textarea>
-                    </s-text-field>
+                <div slot="text" id="heart">
+                    <span id="hearth">心动值</span>
+                    <s-slider style="color: #DF5656" id="slider${i}" value="0" min="0" max="10" step="1" labeled="true"></s-slider>
                 </div>
-            </div>
-        </div>
-        <div slot="text" id="heart">
-            <span id="hearth">心动值</span>
-            <s-slider style="color: #DF5656" id="slider${i}" value="0" min="0" max="10" step="1" labeled="true"></s-slider>
-        </div>
-    </s-card>
-    `
+            </s-card>
+            `
+        } else {
+            myCourses.innerHTML += `
+            <s-card clickable="true">
+                <div slot="subhead" class="courses" style="margin-bottom:8px">${courses[i]}<span id="hearth" style="float:right">推荐</span></div>
+            </s-card>
+            `
+        }
+    }
+}
+function addEvent() {
+    for (let i = 0; i < chosenNum; i++) {
+        if (chosenCourses[i].recommand === "true") {
+            continue;
+        }
+        let slider = document.getElementById("slider" + i);
+        slider.addEventListener("change", function () {
+            let ball = balls[i];
+            ball.size = 8 * slider.value + 90;
+        });
+        
+    }
 }
 
-for (let i = 0; i < chosenNum; i++) {
-    let rate = document.getElementById("rate" + i);
-    let slider = document.getElementById("slider" + i);
-    slider.addEventListener("change", function () {
-        let ball = balls[i];
-        ball.size = 8 * slider.value + 90;
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('opacity').addEventListener('change', () => {
+        const nowopacity = document.getElementById('opacity').value;
+        opacity = nowopacity / 100;
     });
-    
-}
+  });
 

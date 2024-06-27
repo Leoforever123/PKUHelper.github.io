@@ -18,6 +18,72 @@ document.addEventListener('DOMContentLoaded', () => {
       filterCourses();
   });
 });
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('opacity').addEventListener('change', () => {
+      const opacity = document.getElementById('opacity').value;
+      document.getElementById('classsheet').style.opacity = opacity / 100;
+  });
+});
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('Zelda').addEventListener('click', () => {
+      document.querySelector('body').style.backgroundImage = "url('../images/background1.jpg')";
+  });
+  document.getElementById('paper').addEventListener('click', () => {
+      document.querySelector('body').style.backgroundImage = "url('../images/background2.png')";
+  });
+  document.getElementById('red').addEventListener('click', () => {
+      document.querySelector('body').style.backgroundImage = "url('../images/background3.jpg')";
+  });
+  document.getElementById('DIY').addEventListener('click', () => {
+    // 创建一个隐藏的文件输入元素
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = 'image/*';
+    fileInput.style.display = 'none';
+
+    // 监听文件输入元素的变化事件
+    fileInput.addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.body.style.backgroundImage = `url(${e.target.result})`;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    // 触发文件输入元素的点击事件
+    fileInput.click();
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('instruction').addEventListener('click', () => {
+    let result = `
+          本项目的主要目的在于优化选课网较为丑陋的
+      选课界面，并且解决只要冲突选课就无法加入预选
+      表格，无法有效预览一周课程的问题。你可以先在
+      本网站进行预选和调整，同时选择会出现冲突的课程，
+      最终决定好要选哪些课程后再到选课网进行选课。
+
+      1. 左侧课程选择，点击加入课程表可以加入我的课程。
+      2. 我的课程中，点击移除课程可以移除课程。
+      3. 当有课程冲突时，表格中会出现提示。
+
+      本项目由王骏达完成，如有问题请联系邮箱：
+      2200013111@stu.pku.edu.cn
+    `;
+    customElements.get('s-dialog').show({
+      headline: '使用说明',
+      text: result,
+      actions: [{
+          text: '关闭',
+      }]
+    });
+  });
+});
+
 let classCount = 0;
 let allCourses = []; // 存储所有课程信息
 let chosenCourses = []; // 存储用户选择的课程
@@ -37,6 +103,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
+function setconflict(res) {
+  localStorage.setItem('conflict', res);
+}
+
 
 function getRandomColor() {
   const letters = '89ABCDEF';
@@ -271,6 +342,7 @@ function addCollapsedCard(parentId, course) {
   classCount++;
 }
 
+
 // 定义一个异步函数来加载JSON文件并遍历所有课程
 async function getAllCourses() {
     try {
@@ -354,6 +426,7 @@ function addToTable(course) {
   const classroom = course.classroom;
   const teacher = course.teacher;
   const color = getRandomColor();
+  let has_confilct = false;
   for (let i = 0; i < day.length; i++) {
       for (let j = 0; j < Number(duration[i]); j++) {
           const cell = document.getElementById(day[i].toLowerCase() + '-' + (Number(time[i]) + j));
@@ -383,6 +456,7 @@ function addToTable(course) {
             out.appendChild(li1);
           } else {
             if (cell.innerHTML !== '') {
+              has_confilct = true;
               const name1 = cell.querySelector('#name').textContent;
               const classroom1 = cell.querySelector('#classroom').textContent;
               const teacher1 = cell.querySelector('#teacher').textContent;
@@ -441,9 +515,16 @@ function addToTable(course) {
           
       }
   }
+  if (has_confilct) {
+    setconflict('true');
+  } else {
+    setconflict('false');
+  }
 }
 
 
 
 // 调用函数以遍历所有课程
 getAllCourses();
+
+
