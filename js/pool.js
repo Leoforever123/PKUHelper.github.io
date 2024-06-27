@@ -1,12 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const type = localStorage.getItem("background");
+    if (type === null) {
+        document.querySelector('body').style.backgroundImage = "url('../images/background1.jpg')";
+    } else if (type === "Zelda") {
+        document.querySelector('body').style.backgroundImage = "url('../images/background1.jpg')";
+    } else if (type === "paper") {
+        document.querySelector('body').style.backgroundImage = "url('../images/background2.png')";
+    } else if (type === "red") {
+        document.querySelector('body').style.backgroundImage = "url('../images/background3.jpg')";
+    } else {
+        document.querySelector('body').style.backgroundImage = type;
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('Zelda').addEventListener('click', () => {
         document.querySelector('body').style.backgroundImage = "url('../images/background1.jpg')";
+        localStorage.setItem("background", "Zelda");
     });
     document.getElementById('paper').addEventListener('click', () => {
         document.querySelector('body').style.backgroundImage = "url('../images/background2.png')";
+        localStorage.setItem("background", "paper");
     });
     document.getElementById('red').addEventListener('click', () => {
         document.querySelector('body').style.backgroundImage = "url('../images/background3.jpg')";
+        localStorage.setItem("background", "red");
     });
     document.getElementById('DIY').addEventListener('click', () => {
       // 创建一个隐藏的文件输入元素
@@ -22,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
               const reader = new FileReader();
               reader.onload = function(e) {
                   document.body.style.backgroundImage = `url(${e.target.result})`;
+                  localStorage.setItem("background", document.body.style.backgroundImage);
               };
               reader.readAsDataURL(file);
           }
@@ -29,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
       // 触发文件输入元素的点击事件
       fileInput.click();
+
     });
   });
   
@@ -437,5 +458,5 @@ document.addEventListener('DOMContentLoaded', () => {
         const nowopacity = document.getElementById('opacity').value;
         opacity = nowopacity / 100;
     });
-  });
+});
 
