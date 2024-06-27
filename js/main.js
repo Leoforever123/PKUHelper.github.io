@@ -26,13 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('Zelda').addEventListener('click', () => {
-      document.querySelector('body').style.backgroundImage = "url('../images/background1.jpg')";
+      document.querySelector('body').style.backgroundImage = "url('images/background1.jpg')";
   });
   document.getElementById('paper').addEventListener('click', () => {
-      document.querySelector('body').style.backgroundImage = "url('../images/background2.png')";
+      document.querySelector('body').style.backgroundImage = "url('images/background2.png')";
   });
   document.getElementById('red').addEventListener('click', () => {
-      document.querySelector('body').style.backgroundImage = "url('../images/background3.jpg')";
+      document.querySelector('body').style.backgroundImage = "url('images/background3.jpg')";
   });
   document.getElementById('DIY').addEventListener('click', () => {
     // 创建一个隐藏的文件输入元素
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
       3. 当有课程冲突时，表格中会出现提示。
 
       本项目由王骏达完成，如有问题请联系邮箱：
-      2200013111@stu.pku.edu.cn
+      leoforever823@gmail.com
     `;
     customElements.get('s-dialog').show({
       headline: '使用说明',
@@ -359,8 +359,8 @@ async function getAllCourses() {
         allCourses = data.classes;
         allCourses.forEach(course => {
             // 在这里对每个课程进行处理
-            addCollapsedCard('accordion', course);
-            classCount++;
+            // addCollapsedCard('accordion', course);
+            // classCount++;
         });
     } catch (error) {
         // 处理错误
@@ -371,18 +371,18 @@ async function getAllCourses() {
 // 过滤课程
 function filterCourses() {
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
-    const filteredCourses = allCourses.filter(course => course.name.toLowerCase().includes(searchInput));
-
     // 清空现有的课程展示
     const accordion = document.getElementById('accordion');
     accordion.innerHTML = '';
     classCount = 0;
-
-    // 重新添加过滤后的课程
-    filteredCourses.forEach(course => {
-        addCollapsedCard('accordion', course);
-        classCount++;
-    });
+    if(searchInput !== '') {
+      const filteredCourses = allCourses.filter(course => course.name.toLowerCase().includes(searchInput));
+      // 重新添加过滤后的课程
+      filteredCourses.forEach(course => {
+          addCollapsedCard('accordion', course);
+          classCount++;  
+      });
+    }
 }
 
 /**********课程表主体实现************/
@@ -450,6 +450,7 @@ function addToTable(course) {
             const li1 = document.createElement('li');
             li1.setAttribute('align', 'center');
             li1.setAttribute('style', `background-color: ${color}`);
+            li1.setAttribute('class', 'conflict-item');
             li1.innerHTML = `
               <h4>${name}</h4>
             `;
@@ -494,6 +495,7 @@ function addToTable(course) {
                 <h4>${name1}</h4>
               `;
               li.setAttribute('style', `background-color: ${oldcolor}`);
+              li.setAttribute('class', 'conflict-item');
               out.appendChild(li);
               const li1 = document.createElement('li');
               li1.setAttribute('align', 'center');
@@ -501,6 +503,7 @@ function addToTable(course) {
                 <h4>${name}</h4>
               `;
               li1.setAttribute('style', `background-color: ${color}`);
+              li1.setAttribute('class', 'conflict-item');
               out.appendChild(li1);
             } else {
               cell.align = 'center';

@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         来养课程球吧！
 
         本项目由王骏达完成，如有问题请联系邮箱：
-        2200013111@stu.pku.edu.cn
+        leoforever823@gmail.com
       `;
       customElements.get('s-dialog').show({
         headline: '使用说明',

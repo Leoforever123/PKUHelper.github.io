@@ -68,3 +68,10 @@ s-dialog {
     white-space: pre;
     font-size : 18px;
 }
+
+.conflict-item {
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 1px;
+    margin: 5px;
+}
