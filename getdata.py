@@ -58,7 +58,7 @@ for row in rows[0:]:  # 跳过表头
         'day': [],
         "time": [],
         'duration': [],
-        'teacher': cols[7].text.strip(),
+        'teacher': cols[9].text.strip(),
         'description': '',
         'classroom': ''
     }

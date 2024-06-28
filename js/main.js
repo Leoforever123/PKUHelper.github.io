@@ -463,7 +463,6 @@ function addToTable(course) {
             li.setAttribute('align', 'center');
             li.innerHTML = `
               <h4>${name}</h4>
-              <p>${classroom}</p>
               <p>${teacher}</p>
             `;
             ul.appendChild(li);
@@ -494,13 +493,11 @@ function addToTable(course) {
                   <ul class="dropdown-menu">
                     <li align="center">
                       <h4>${name1}</h4>
-                      <p>${classroom1}</p>
                       <p>${teacher1}</p>
                     </li>
                     <li><hr class="dropdown-divider"></li>
                     <li align="center">
                       <h4>${name}</h4>
-                      <p>${classroom}</p>
                       <p>${teacher}</p>
                     </li>
                   </ul>
@@ -531,7 +528,6 @@ function addToTable(course) {
               cell.style.backgroundColor = color;
               cell.innerHTML = `
               <h4 id='name'>${name}</h4>
-              <p id='classroom'>${classroom}</p>
               <p id='teacher'>${teacher}</p>
               `;
             }
