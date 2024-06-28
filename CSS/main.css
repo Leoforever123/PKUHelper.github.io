@@ -57,6 +57,7 @@ body
 {
     background-image:url('../images/background1.jpg');
     background-size:cover;
+    background-attachment: fixed;
 }
 
 #classsheet {
@@ -74,4 +75,12 @@ s-dialog {
     padding-top: 5px;
     padding-bottom: 1px;
     margin: 5px;
+}
+s-button {
+    font-size: 16px;
+    width: 80px;
+    height : 30px;
+    float: right;
+    align-items: center;
+    justify-content: center;
 }

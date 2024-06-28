@@ -1,64 +1,2761 @@
 {
-    "name": "class database",
-    "version": "1.0.0",
-    "formed": "2024-06-25",
-    "description": "this is a class database for all the classes showing on PKUHelper web",
-    "main": "index.js",
     "classes": [
         {
-            "name": "计算机网络",
+            "ID": "04830070",
+            "name": "集合论与图论",
+            "department": "信息科学技术学院",
             "credit": "3",
-            "teacher": "李建",
-            "day": ["MON", "FRI"],
-            "time": ["1", "2"],
-            "duration": ["2", "2"],
-            "classroom": "教一 101",
-            "description": "计算机网络课程，主要讲解计算机网络的基本概念和原理，以及网络协议的设计与实现。",
-            "recommand": "true"
+            "day": [
+                "TUE",
+                "THU"
+            ],
+            "time": [
+                "2",
+                "4"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
         },
         {
-            "name": "计算机组成原理",
-            "credit": "3",
-            "teacher": "李建",
-            "day": ["MON"],
-            "time": ["2"],
-            "duration": ["2"],
-            "classroom": "教一 101",
-            "description": "计算机组成原理课程，主要讲解计算机的基本组成原理，以及计算机的工作原理。",
-            "recommand": "false"
+            "ID": "04830790",
+            "name": "嵌入式系统",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "TUE"
+            ],
+            "time": [
+                "9"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-1",
+            "description": "",
+            "classroom": ""
         },
         {
-            "name": "操作系统",
-            "credit": "3",
-            "teacher": "李建",
-            "day": ["MON"],
-            "time": ["1"],
-            "duration": ["2"],
-            "classroom": "教一 101",
-            "description": "操作系统课程，主要讲解操作系统的基本概念和原理，以及操作系统的设计与实现。",
-            "recommand": "false"
+            "ID": "04833530",
+            "name": "智能硬件应用实验",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "WED"
+            ],
+            "time": [
+                "9"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-1",
+            "description": "",
+            "classroom": ""
         },
         {
-            "name": "数据库系统",
-            "credit": "3",
-            "teacher": "李建",
-            "day": ["THU"],
-            "time": ["1"],
-            "duration": ["2"],
-            "classroom": "教一 101",
-            "description": "数据库系统课程，主要讲解数据库系统的基本概念和原理，以及数据库系统的设计与实现。",
-            "recommand": "false"
-        },
-        {
+            "ID": "04834200",
             "name": "编译原理",
+            "department": "信息科学技术学院",
+            "credit": "4",
+            "day": [
+                "WED",
+                "FRI"
+            ],
+            "time": [
+                "0",
+                "4"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835040",
+            "name": "智能科学研究实践I",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "TUE"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835411",
+            "name": "信息科学技术劳动实践",
+            "department": "信息科学技术学院",
+            "credit": "1",
+            "day": [],
+            "time": [],
+            "duration": [],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835420",
+            "name": "科研轮转实习",
+            "department": "信息科学技术学院",
+            "credit": "0",
+            "day": [],
+            "time": [],
+            "duration": [],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835430",
+            "name": "信息学中的概率统计",
+            "department": "信息科学技术学院",
             "credit": "3",
-            "teacher": "李建",
-            "day": ["FRI"],
-            "time": ["1"],
-            "duration": ["2"],
-            "classroom": "教一 101",
-            "description": "编译原理课程，主要讲解编译原理的基本概念和原理，以及编译原理的设计与实现。",
-            "recommand": "true"
+            "day": [
+                "TUE",
+                "FRI"
+            ],
+            "time": [
+                "0",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835600",
+            "name": "电子信息研究实践（II）",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "MON"
+            ],
+            "time": [
+                "9"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835620",
+            "name": "电子工程实训",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "WED"
+            ],
+            "time": [
+                "4"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04830041",
+            "name": "计算概论A",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "WED",
+                "FRI"
+            ],
+            "time": [
+                "4",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04830145",
+            "name": "计算机组织与体系结构实习",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "MON"
+            ],
+            "time": [
+                "9"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04830540",
+            "name": "数据结构与算法 (A) (实验班)",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "WED",
+                "FRI"
+            ],
+            "time": [
+                "2",
+                "0"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04831435",
+            "name": "计算机实习",
+            "department": "信息科学技术学院",
+            "credit": "0",
+            "day": [
+                "WED"
+            ],
+            "time": [
+                "8"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04831650",
+            "name": "计算概论（B）上机",
+            "department": "信息科学技术学院",
+            "credit": "0",
+            "day": [
+                "WED"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04833370",
+            "name": "信息科学中的物理学（上）",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "MON",
+                "WED"
+            ],
+            "time": [
+                "4",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04833400",
+            "name": "离散数学与结构（I）",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "TUE",
+                "THU"
+            ],
+            "time": [
+                "4",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04833460",
+            "name": "前沿计算研究实践（I）",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "WED"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "3"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04833910",
+            "name": "区块链理论与技术",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "MON",
+                "FRI"
+            ],
+            "time": [
+                "9",
+                "4"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834470",
+            "name": "计算概论（C）",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "TUE",
+                "THU"
+            ],
+            "time": [
+                "4",
+                "0"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04830010",
+            "name": "信息科学技术概论",
+            "department": "信息科学技术学院",
+            "credit": "1",
+            "day": [
+                "MON"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04830042",
+            "name": "计算概论A上机实习课",
+            "department": "信息科学技术学院",
+            "credit": "0",
+            "day": [
+                "FRI"
+            ],
+            "time": [
+                "4"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04830090",
+            "name": "数理逻辑",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "FRI"
+            ],
+            "time": [
+                "9"
+            ],
+            "duration": [
+                "3"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04830100",
+            "name": "数字逻辑设计",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "MON",
+                "WED"
+            ],
+            "time": [
+                "2",
+                "0"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04830494",
+            "name": "数据结构与算法上机",
+            "department": "信息科学技术学院",
+            "credit": "0",
+            "day": [
+                "FRI"
+            ],
+            "time": [
+                "8"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04830530",
+            "name": "计算概论A（实验班）",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "WED",
+                "FRI"
+            ],
+            "time": [
+                "4",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04830670",
+            "name": "信号与系统",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "TUE",
+                "FRI"
+            ],
+            "time": [
+                "2",
+                "0"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04832640",
+            "name": "数学物理方法",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "TUE",
+                "THU"
+            ],
+            "time": [
+                "6",
+                "0"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04833820",
+            "name": "电子线路分析与设计",
+            "department": "信息科学技术学院",
+            "credit": "5",
+            "day": [
+                "MON",
+                "WED"
+            ],
+            "time": [
+                "2",
+                "0"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834290",
+            "name": "信号与系统（实验班）",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "TUE",
+                "FRI"
+            ],
+            "time": [
+                "2",
+                "0"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04830830",
+            "name": "数字信号处理实验",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [],
+            "time": [],
+            "duration": [],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04831860",
+            "name": "光纤通信系统",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "MON"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04831970",
+            "name": "卫星导航定位系统概论",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "TUE"
+            ],
+            "time": [
+                "4"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04832410",
+            "name": "原子物理导论",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "FRI"
+            ],
+            "time": [
+                "2"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04832440",
+            "name": "光学",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "MON",
+                "WED"
+            ],
+            "time": [
+                "0",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04833821",
+            "name": "电子线路分析与设计研讨班",
+            "department": "信息科学技术学院",
+            "credit": "0",
+            "day": [
+                "TUE"
+            ],
+            "time": [
+                "9"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04833830",
+            "name": "微处理器与接口技术",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "TUE",
+                "THU"
+            ],
+            "time": [
+                "2",
+                "0"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834660",
+            "name": "电路、信号与系统",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "MON",
+                "WED"
+            ],
+            "time": [
+                "2",
+                "0"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04831180",
+            "name": "PSoC应用开发基础实验",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [],
+            "time": [],
+            "duration": [],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04831190",
+            "name": "射频集成电路",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "MON",
+                "WED"
+            ],
+            "time": [
+                "2",
+                "4"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04831300",
+            "name": "图像处理",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "THU"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "3"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04831811",
+            "name": "微纳尺度流体科学与应用",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "WED"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "3"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834340",
+            "name": "纳米光电集成电路",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "WED",
+                "FRI"
+            ],
+            "time": [
+                "0",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834590",
+            "name": "芯片设计自动化与智能优化",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "MON",
+                "WED"
+            ],
+            "time": [
+                "4",
+                "6"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834700",
+            "name": "集成电路原理与设计",
+            "department": "信息科学技术学院",
+            "credit": "5",
+            "day": [
+                "MON",
+                "THU"
+            ],
+            "time": [
+                "6",
+                "4"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835020",
+            "name": "可视化与可视分析",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "WED"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835331",
+            "name": "集成电路制造技术实践课",
+            "department": "信息科学技术学院",
+            "credit": "0",
+            "day": [],
+            "time": [],
+            "duration": [],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835380",
+            "name": "基于深度学习的自然语言理解",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "FRI"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04830260",
+            "name": "理论计算机科学基础",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "WED"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "3"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04830300",
+            "name": "Web技术概论",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [],
+            "time": [],
+            "duration": [],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04831410",
+            "name": "计算概论（B）",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "TUE"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "3"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834260",
+            "name": "操作系统",
+            "department": "信息科学技术学院",
+            "credit": "4",
+            "day": [
+                "MON",
+                "WED"
+            ],
+            "time": [
+                "6",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834300",
+            "name": "算法博弈论",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "THU"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "3"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834560",
+            "name": "人工智能技术与应用",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "THU"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835100",
+            "name": "计算机系统综合设计与实现",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "TUE"
+            ],
+            "time": [
+                "2"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835350",
+            "name": "电子线路原理（实验班）",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "TUE",
+                "THU"
+            ],
+            "time": [
+                "0",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835570",
+            "name": "大模型与智能体专题",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "WED"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835580",
+            "name": "大语言模型原理、挑战与行业应用",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "WED"
+            ],
+            "time": [
+                "2"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04830050",
+            "name": "数据结构与算法 (A)",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "WED",
+                "FRI"
+            ],
+            "time": [
+                "2",
+                "0"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04830870",
+            "name": "热力学与统计物理 （B）",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "WED",
+                "FRI"
+            ],
+            "time": [
+                "2",
+                "0"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04832200",
+            "name": "纳电子器件导论",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "THU"
+            ],
+            "time": [
+                "2"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04832363",
+            "name": "计算机系统导论讨论班",
+            "department": "信息科学技术学院",
+            "credit": "0",
+            "day": [
+                "WED"
+            ],
+            "time": [
+                "9"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04833040",
+            "name": "计算机系统导论",
+            "department": "信息科学技术学院",
+            "credit": "5",
+            "day": [
+                "MON",
+                "THU"
+            ],
+            "time": [
+                "4",
+                "4"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04833831",
+            "name": "微处理器与接口技术实验",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [],
+            "time": [],
+            "duration": [],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834250",
+            "name": "机器学习在数据分析预测中的应用",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "WED"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "3"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834530",
+            "name": "机器视觉与边缘智能",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "MON",
+                "THU"
+            ],
+            "time": [
+                "2",
+                "4"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834970",
+            "name": "固体电子学",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "WED",
+                "FRI"
+            ],
+            "time": [
+                "2",
+                "0"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835590",
+            "name": "量子输运",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "TUE",
+                "THU"
+            ],
+            "time": [
+                "6",
+                "0"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04830140",
+            "name": "计算机组织与体系结构",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "THU"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "3"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04831250",
+            "name": "机器智能实验",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [],
+            "time": [],
+            "duration": [],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04831730",
+            "name": "机器学习概论",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "WED",
+                "FRI"
+            ],
+            "time": [
+                "2",
+                "0"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834100",
+            "name": "信息科学中的数学",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "THU"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834240",
+            "name": "人工智能、机器人与伦理",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "FRI"
+            ],
+            "time": [
+                "2"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834490",
+            "name": "操作系统（实验班）",
+            "department": "信息科学技术学院",
+            "credit": "4",
+            "day": [
+                "MON",
+                "WED"
+            ],
+            "time": [
+                "6",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834690",
+            "name": "半导体物理",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "MON",
+                "WED"
+            ],
+            "time": [
+                "4",
+                "6"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834691",
+            "name": "半导体物理研讨班",
+            "department": "信息科学技术学院",
+            "credit": "0",
+            "day": [
+                "MON"
+            ],
+            "time": [
+                "4"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835250",
+            "name": "电子信息前沿与顶点实践（上）",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "THU"
+            ],
+            "time": [
+                "9"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-1",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835310",
+            "name": "离散数学基础",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "TUE",
+                "THU"
+            ],
+            "time": [
+                "6",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04830270",
+            "name": "程序设计语言概论",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "WED"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04830410",
+            "name": "信息安全引论",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "THU"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04830510",
+            "name": "语言统计分析",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "WED"
+            ],
+            "time": [
+                "4"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04831890",
+            "name": "现代信息检索导论",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "WED"
+            ],
+            "time": [
+                "9"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04833900",
+            "name": "密码学基础",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "WED"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "3"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834220",
+            "name": "软件工程",
+            "department": "信息科学技术学院",
+            "credit": "4",
+            "day": [
+                "TUE",
+                "THU"
+            ],
+            "time": [
+                "2",
+                "4"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834520",
+            "name": "强化学习",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "THU"
+            ],
+            "time": [
+                "9"
+            ],
+            "duration": [
+                "3"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834760",
+            "name": "智能机器人系统导论",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "WED"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "3"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834940",
+            "name": "量子计算",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "WED",
+                "FRI"
+            ],
+            "time": [
+                "4",
+                "4"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835010",
+            "name": "多模态学习",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "MON",
+                "THU"
+            ],
+            "time": [
+                "2",
+                "4"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04831290",
+            "name": "模式识别导论",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "TUE",
+                "FRI"
+            ],
+            "time": [
+                "2",
+                "0"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04831990",
+            "name": "C#程序设计及其应用",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "THU"
+            ],
+            "time": [
+                "4"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-1",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04833020",
+            "name": "软件分析技术",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "TUE",
+                "THU"
+            ],
+            "time": [
+                "4",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04833420",
+            "name": "机器学习",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "TUE"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "3"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04833870",
+            "name": "集成电路器件导论",
+            "department": "信息科学技术学院",
+            "credit": "4",
+            "day": [
+                "TUE",
+                "THU"
+            ],
+            "time": [
+                "4",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834210",
+            "name": "计算机网络",
+            "department": "信息科学技术学院",
+            "credit": "4",
+            "day": [
+                "MON",
+                "WED"
+            ],
+            "time": [
+                "4",
+                "0"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834480",
+            "name": "计算机网络（实验班）",
+            "department": "信息科学技术学院",
+            "credit": "4",
+            "day": [
+                "MON",
+                "WED"
+            ],
+            "time": [
+                "4",
+                "0"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834650",
+            "name": "开源软件技术",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "WED"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "3"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835400",
+            "name": "自然语言处理",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "TUE",
+                "THU"
+            ],
+            "time": [
+                "4",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835560",
+            "name": "趣谈图像计算",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "MON"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04830220",
+            "name": "数据库概论",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "MON",
+                "WED"
+            ],
+            "time": [
+                "4",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04832540",
+            "name": "中级算法应用技巧",
+            "department": "信息科学技术学院",
+            "credit": "4",
+            "day": [],
+            "time": [],
+            "duration": [],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04832550",
+            "name": "高级算法应用技巧",
+            "department": "信息科学技术学院",
+            "credit": "6",
+            "day": [],
+            "time": [],
+            "duration": [],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834350",
+            "name": "医学通识：信息时代的健康素养",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "MON"
+            ],
+            "time": [
+                "9"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834701",
+            "name": "集成电路原理与设计实践课",
+            "department": "信息科学技术学院",
+            "credit": "0",
+            "day": [],
+            "time": [],
+            "duration": [],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834820",
+            "name": "论信息",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "WED"
+            ],
+            "time": [
+                "9"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834890",
+            "name": "先进电子材料",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "TUE",
+                "THU"
+            ],
+            "time": [
+                "6",
+                "0"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834990",
+            "name": "智能机器人概论",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "WED"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "3"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835070",
+            "name": "认知推理",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "MON"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "3"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835090",
+            "name": "文本数据挖掘与社会科学计算",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "THU"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04830720",
+            "name": "通信原理",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "MON",
+                "WED"
+            ],
+            "time": [
+                "6",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04831420",
+            "name": "数据结构与算法 (B)",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "MON"
+            ],
+            "time": [
+                "9"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04832192",
+            "name": "互联网数据挖掘",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "TUE"
+            ],
+            "time": [
+                "2"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04833030",
+            "name": "文献写作与报告",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "WED"
+            ],
+            "time": [
+                "4"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834280",
+            "name": "通信原理（实验班）",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "MON",
+                "THU"
+            ],
+            "time": [
+                "6",
+                "4"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834831",
+            "name": "数字集成电路与系统设计实验",
+            "department": "信息科学技术学院",
+            "credit": "0",
+            "day": [],
+            "time": [],
+            "duration": [],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834850",
+            "name": "高层次芯片设计",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "TUE",
+                "FRI"
+            ],
+            "time": [
+                "2",
+                "4"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835030",
+            "name": "计算机视觉",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "TUE",
+                "THU"
+            ],
+            "time": [
+                "9",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835060",
+            "name": "人工智能中的数学",
+            "department": "信息科学技术学院",
+            "credit": "4",
+            "day": [
+                "MON",
+                "THU"
+            ],
+            "time": [
+                "6",
+                "6"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835390",
+            "name": "生成模型基础",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "TUE",
+                "FRI"
+            ],
+            "time": [
+                "0",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04803006",
+            "name": "纳米离子学",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "MON",
+                "WED"
+            ],
+            "time": [
+                "4",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04830740",
+            "name": "微波技术实验",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [],
+            "time": [],
+            "duration": [],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04831270",
+            "name": "智能信息系统",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "WED",
+                "FRI"
+            ],
+            "time": [
+                "0",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04832400",
+            "name": "高级光电子技术实验",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [],
+            "time": [],
+            "duration": [],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04833230",
+            "name": "连接世界的通信",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "THU"
+            ],
+            "time": [
+                "4"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04833850",
+            "name": "物联网基础",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "WED",
+                "FRI"
+            ],
+            "time": [
+                "4",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834550",
+            "name": "化合物半导体及光电子器件",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "TUE",
+                "THU"
+            ],
+            "time": [
+                "4",
+                "0"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835000",
+            "name": "可视计算与交互概论",
+            "department": "信息科学技术学院",
+            "credit": "4",
+            "day": [
+                "MON",
+                "TUE"
+            ],
+            "time": [
+                "0",
+                "4"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835330",
+            "name": "集成电路制造技术",
+            "department": "信息科学技术学院",
+            "credit": "4",
+            "day": [
+                "MON",
+                "WED"
+            ],
+            "time": [
+                "2",
+                "4"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835470",
+            "name": "图神经网络",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "FRI"
+            ],
+            "time": [
+                "2"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04831320",
+            "name": "脑与认知科学",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "THU"
+            ],
+            "time": [
+                "2"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04831510",
+            "name": "微电子学概论",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "TUE"
+            ],
+            "time": [
+                "4"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04832010",
+            "name": "基于HDL的数字系统设计",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "WED",
+                "FRI"
+            ],
+            "time": [
+                "2",
+                "0"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04833880",
+            "name": "创新与快速原型研制",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "MON"
+            ],
+            "time": [
+                "9"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834320",
+            "name": "在北大成为更好的自己",
+            "department": "信息科学技术学院",
+            "credit": "1",
+            "day": [
+                "FRI"
+            ],
+            "time": [
+                "4"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-8",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834830",
+            "name": "数字集成电路与系统",
+            "department": "信息科学技术学院",
+            "credit": "4",
+            "day": [
+                "TUE",
+                "THU"
+            ],
+            "time": [
+                "4",
+                "6"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834840",
+            "name": "模拟集成电路与系统",
+            "department": "信息科学技术学院",
+            "credit": "4",
+            "day": [
+                "TUE",
+                "FRI"
+            ],
+            "time": [
+                "4",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04834841",
+            "name": "模拟集成电路与系统实践课",
+            "department": "信息科学技术学院",
+            "credit": "0",
+            "day": [],
+            "time": [],
+            "duration": [],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835050",
+            "name": "人工智能中的编程",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "WED",
+                "THU"
+            ],
+            "time": [
+                "4",
+                "9"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835340",
+            "name": "高等模拟集成电路",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "TUE",
+                "THU"
+            ],
+            "time": [
+                "4",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04835610",
+            "name": "元宇宙技术导论",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "THU"
+            ],
+            "time": [
+                "2"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04031652",
+            "name": "思想道德与法治",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "TUE"
+            ],
+            "time": [
+                "4"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "00130280",
+            "name": "计算方法(B)",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "MON",
+                "THU"
+            ],
+            "time": [
+                "2",
+                "4"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "00431142",
+            "name": "热学",
+            "department": "信息科学技术学院",
+            "credit": "2",
+            "day": [
+                "THU"
+            ],
+            "time": [
+                "6"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "00432141",
+            "name": "电动力学(B)",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "TUE",
+                "THU"
+            ],
+            "time": [
+                "0",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "00432149",
+            "name": "量子力学 (B)",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "MON",
+                "WED"
+            ],
+            "time": [
+                "0",
+                "0"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "00432150",
+            "name": "量子力学 (A)",
+            "department": "信息科学技术学院",
+            "credit": "4",
+            "day": [
+                "MON",
+                "WED"
+            ],
+            "time": [
+                "0",
+                "0"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "00431141",
+            "name": "力学",
+            "department": "信息科学技术学院",
+            "credit": "3",
+            "day": [
+                "MON",
+                "WED"
+            ],
+            "time": [
+                "0",
+                "2"
+            ],
+            "duration": [
+                "2",
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
+        },
+        {
+            "ID": "04832090",
+            "name": "力学B类习题补充",
+            "department": "信息科学技术学院",
+            "credit": "0",
+            "day": [
+                "WED"
+            ],
+            "time": [
+                "9"
+            ],
+            "duration": [
+                "2"
+            ],
+            "teacher": "1-16",
+            "description": "",
+            "classroom": ""
         }
     ]
 }

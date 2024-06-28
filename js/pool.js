@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('Zelda').addEventListener('click', () => {
         document.querySelector('body').style.backgroundImage = "url('../images/background1.jpg')";
@@ -106,9 +105,7 @@ async function getAllCourses() {
             for (let j = 0; j < allCourses.length; j++) {
                 if (courses[i] === allCourses[j].name) {
                     chosenCourses.push(allCourses[j]);
-                    if (allCourses[j].recommand === "false") {
-                        nonrecommend.push([allCourses[j], i]);
-                    }
+                    nonrecommend.push([allCourses[j], i]);
                     break;
                 }
             }
@@ -132,8 +129,19 @@ function P(e, num0, num1, x) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+    console.log(nonrecommend);
     const check = document.querySelector("#check");
     check.addEventListener("click", function () {
+        if (nonrecommend.length === 0) {
+            customElements.get('s-dialog').show({
+                headline: '推荐投点',
+                text: '没有需要计算的课程！',
+                actions: [{
+                    text: '确定',
+                }]
+            });
+            return;
+        }
         let need = [];
         let pending = [];
         let maxp = [];
@@ -200,6 +208,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     text: '确定',
                 }]
             });
+            return;
         }
         for (let j = 0; j < need.length; j++) {
             let i = need[j];
@@ -406,39 +415,95 @@ loop();
 function addClasses() {
     const myCourses = document.querySelector("#myCourses");
     for (let i = 0; i < chosenNum; i++) {
-        if (chosenCourses[i].recommand === "false") {
-            myCourses.innerHTML += `
-            <s-card clickable="true">
-            <div slot="subhead" class="courses">${courses[i]}</div>
-                <div slot="text">
-                    <div class="row" id="classs">
-                        <div class="col">
-                            <s-text-field label="已选人数">
-                                <textarea rows="1" cols="5" id="pending${i}"></textarea>
-                            </s-text-field>
-                        </div>
-                        <div class="col">
-                            <s-text-field label="限选人数">
-                                <textarea rows="1" cols="5" id="max${i}"></textarea>
-                            </s-text-field>
-                        </div>
+        myCourses.innerHTML += `
+        <s-card id="card${i}">
+        <div slot="subhead" class="courses" style="display:inline;">${courses[i]}</div>
+        <s-button slot="subhead" id="check${i}" style="display:inline; float:right; " class="false">推荐</s-button>
+        </s-card>
+        `;
+        let card = myCourses.querySelector("#card" + i);
+        const div1 = document.createElement("div");
+        div1.innerHTML = `
+        <div class="row" id="classs">
+            <div class="col">
+                <s-text-field label="已选人数">
+                    <textarea rows="1" cols="5" id="pending${i}"></textarea>
+                </s-text-field>
+            </div>
+            <div class="col">
+                <s-text-field label="限选人数">
+                    <textarea rows="1" cols="5" id="max${i}"></textarea>
+                </s-text-field>
+            </div>
+        </div>
+        `
+        div1.setAttribute("slot", "text");
+        card.appendChild(div1);
+        const div2 = document.createElement("div");
+        div2.innerHTML = `
+            <span id="hearth">心动值</span>
+            <s-slider style="color: #DF5656" id="slider${i}" value="0" min="0" max="10" step="1" labeled="true"></s-slider>
+        `
+        div2.setAttribute("slot", "text");
+        div2.setAttribute("id", "heart");
+        card.appendChild(div2);
+
+    }
+    for (let i = 0; i < chosenNum; i++) {
+        let check = document.getElementById("check" + i);
+        check.addEventListener("click", function () {
+            console.log(check.classList)
+            if (check.classList.contains("false")) {
+                let card = document.getElementById("card" + i);
+                // 删除倒数第二个后代
+                card.removeChild(card.lastChild.previousElementSibling);
+                check.classList.remove("false");
+                check.classList.add("true");
+                for (let j = 0; j < nonrecommend.length; j++) {
+                    if (nonrecommend[j][1] === i) {
+                        nonrecommend.splice(j, 1);
+                        break;
+                    }
+                }
+                totalsum = nonrecommend.length;
+            } else if(check.classList.contains("true")) {
+                let card = document.getElementById("card" + i);
+                const div1 = document.createElement("div");
+                div1.innerHTML = `
+                <div class="row" id="classs">
+                    <div class="col">
+                        <s-text-field label="已选人数">
+                            <textarea rows="1" cols="5" id="pending${i}"></textarea>
+                        </s-text-field>
+                    </div>
+                    <div class="col">
+                        <s-text-field label="限选人数">
+                            <textarea rows="1" cols="5" id="max${i}"></textarea>
+                        </s-text-field>
                     </div>
                 </div>
-                <div slot="text" id="heart">
-                    <span id="hearth">心动值</span>
-                    <s-slider style="color: #DF5656" id="slider${i}" value="0" min="0" max="10" step="1" labeled="true"></s-slider>
-                </div>
-            </s-card>
-            `
-        } else {
-            myCourses.innerHTML += `
-            <s-card clickable="true">
-                <div slot="subhead" class="courses" style="margin-bottom:8px">${courses[i]}<span id="hearth" style="float:right">推荐</span></div>
-            </s-card>
-            `
-        }
+                `
+                div1.setAttribute("slot", "text");
+                // 在倒数第二个后代后插入div1
+                card.insertBefore(div1, card.lastChild);
+                check.classList.remove("true");
+                check.classList.add("false"); 
+                for (let j = 0; j < chosenNum; j++) {
+                    if (chosenCourses[j].name === courses[i]) {
+                        nonrecommend.push([chosenCourses[j], i]);
+                        break;
+                    }
+                }    
+                // 按i排序
+                nonrecommend.sort(function(a, b) {
+                    return a[1] - b[1];
+                });
+                totalsum = nonrecommend.length;   
+            }
+        });
     }
 }
+
 function addEvent() {
     for (let i = 0; i < chosenNum; i++) {
         if (chosenCourses[i].recommand === "true") {
@@ -446,6 +511,7 @@ function addEvent() {
         }
         let slider = document.getElementById("slider" + i);
         slider.addEventListener("change", function () {
+            console.log(slider.value);
             let ball = balls[i];
             ball.size = 8 * slider.value + 90;
         });

@@ -228,7 +228,7 @@ function addClass(parentId, course) {
   pTag.appendChild(boldTimeTitle);
 
   for (let i = 0; i < course.day.length; i++) {
-      const timeText = document.createTextNode(course.day[i] + " " + course.time[i] + " - " + (Number(course.time[i]) + Number(course.duration[i] - 1)) + "节 \n");
+      const timeText = document.createTextNode(course.day[i] + " " + (Number(course.time[i]) + 1) + " - " + (Number(course.time[i]) + Number(course.duration[i])) + "节 \n");
       pTag.appendChild(timeText);
   }
   pTag.appendChild(document.createElement('br')); 
@@ -331,7 +331,7 @@ function addCollapsedCard(parentId, course) {
   pTag.appendChild(boldTimeTitle);
 
   for (let i = 0; i < course.day.length; i++) {
-      const timeText = document.createTextNode(course.day[i] + " " + course.time[i] + " - " + (Number(course.time[i]) + Number(course.duration[i] - 1)) + "节 \n");
+      const timeText = document.createTextNode(course.day[i] + " " + (Number(course.time[i]) + 1) + " - " + (Number(course.time[i]) + Number(course.duration[i])) + "节 \n");
       pTag.appendChild(timeText);
   }
   pTag.appendChild(document.createElement('br')); 
@@ -397,7 +397,7 @@ function filterCourses() {
     accordion.innerHTML = '';
     classCount = 0;
     if(searchInput !== '') {
-      const filteredCourses = allCourses.filter(course => course.name.toLowerCase().includes(searchInput));
+      const filteredCourses = allCourses.filter(course => (course.name.toLowerCase().includes(searchInput) || course.teacher.toLowerCase().includes(searchInput) || course.department.toLowerCase().includes(searchInput)));
       // 重新添加过滤后的课程
       filteredCourses.forEach(course => {
           addCollapsedCard('accordion', course);
